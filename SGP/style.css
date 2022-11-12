@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+
+.logo-container {
+  flex: 1;
+  text-decoration: none;
+  color:#4dbf00
+}
+
+.logo {
+  font-size: 30px;
+  color: #4dbf00;
+ 
+}
+
+.menu-container {
+  flex: 6;
+  text-decoration: none;
+ 
+}
+
+.menu-container ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.menu-list-item {
+  margin-right: 30px;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+}
+.profile-text{
+  color: white;
+  text-decoration: none;
+}
+.label-label-danger{
+  color: white;
+  text-decoration: none;
+}
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  text-decoration: none;
+}
+
+.profile-text-container {
+  margin: 0 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  color: white;
+  text-decoration: none;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: #4dbf00;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.container {
+  background-color: #151515;
+  min-height: calc(100vh - 50px);
+  color: white;
+}
+
+.content-container {
+  margin-left: 50px;
+}
+
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+}
+
+.featured-title {
+  width: 150px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0;
+}
+
+.featured-button {
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.movie-list-container {
+  padding: 0 20px;
+}
+
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-item-img {
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.movie-list-item-title {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container.active {
+  background-color: white;
+}
+
+.movie-list-title.active {
+  color: black;
+}
+
+.navbar-container.active {
+  background-color: white;
+
+  color: black;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
+.dropdown{
+  color: #4dbf00;
+}
+.dropdown-menu{
+  color: #4dbf00;
+}
+
+@media only screen and (max-width: 940px){
+    .menu-container{
+        display: none;
+    }
+}
+.btn-btn-primary{
+  background-color: rgb(71, 150, 71);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 85px;
+    height: 40px; 
+    cursor: pointer;
+}
+
+/* chatbot*/
+.chat-bar-collapsible {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.2);
+}
+
+.collapsible {
+    background-color:rgb(51, 50, 50) ;
+    color: rgb(253, 252, 252);
+    cursor: pointer;
+    padding: 18px;
+    width: 350px;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px 10px 0px 0px;
+    border: 3px solid white;
+    border-bottom: none;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.full-chat-block {
+    width: 350px;
+    background: rgb(253, 252, 252);
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+}
+
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
+}
+
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(51, 50, 50);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none
+}
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: rgb(51, 50, 50);
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top: 3px solid rgb(40, 38, 38);
+        border-radius: 0px;
+    }
+}
